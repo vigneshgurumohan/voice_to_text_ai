@@ -44,13 +44,12 @@ COPY --from=backend /app/backend /app/backend
 COPY backend/requirements.txt /app/backend/
 RUN pip install --no-cache-dir -r /app/backend/requirements.txt
 
-
 # Copy frontend build from build stage
 COPY --from=frontend /app/frontend/build /app/frontend/build
 
 # Copy supervisord config
 COPY supervisord.conf /etc/supervisord.conf
 
-EXPOSE 8000 3000
+EXPOSE 10000
 
 CMD ["supervisord", "-c", "/etc/supervisord.conf"] 
