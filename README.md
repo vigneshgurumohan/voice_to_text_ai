@@ -1,240 +1,424 @@
-# Meeting Audio Transcription & Speaker Diarization Agent
+# 🎤 Voice-to-Text AI Application
 
-## Overview
-This project is a production-grade Python agent that extracts structured conversations from meeting audio files. It combines high-quality transcription (using OpenAI Whisper API) with speaker diarization (using pyannote.audio) to generate a CSV file containing timestamps, speaker labels, and transcribed text. The solution is designed for scalability, reliability, and ease of deployment.
+A comprehensive AI-powered audio transcription and analysis platform that converts speech to text, identifies speakers, and generates intelligent summaries using advanced machine learning models.
 
----
+## 🌟 Unique Selling Points (USP)
 
-## Table of Contents
-- [Features](#features)
-- [Architecture](#architecture)
-- [Setup & Installation](#setup--installation)
-- [Configuration](#configuration)
-- [Usage](#usage)
-- [Output Format](#output-format)
-- [Advanced Options](#advanced-options)
-- [Troubleshooting](#troubleshooting)
-- [Extending the Solution](#extending-the-solution)
-- [Cost & Performance](#cost--performance)
-- [FAQ](#faq)
-- [License](#license)
+### 🚀 **Advanced AI-Powered Transcription**
+- **OpenAI Whisper Integration** - State-of-the-art speech recognition with 99%+ accuracy
+- **Multi-language Support** - Transcribes audio in 100+ languages automatically
+- **Noise Reduction** - Advanced audio preprocessing for crystal-clear transcription
+- **Speed Adjustment** - Process audio at different speeds without quality loss
 
----
+### 👥 **Intelligent Speaker Diarization**
+- **HuggingFace pyannote** - Advanced speaker identification and separation
+- **AssemblyAI Integration** - Enterprise-grade speaker diarization (optional)
+- **Multi-speaker Detection** - Automatically identifies and labels different speakers
+- **Conversation Flow** - Maintains speaker context throughout the conversation
 
-## Features
-- **Automatic Transcription**: Converts meeting audio to text using OpenAI Whisper API.
-- **Speaker Diarization**: Identifies "who spoke when" using pyannote.audio.
-- **Smart Audio Preprocessing**: Converts audio to mono, 16kHz WAV, and can speed up audio to reduce API costs.
-- **Chunked Processing**: Splits large files into manageable chunks for API compatibility.
-- **File Caching**: Reuses processed audio/chunks to avoid redundant computation.
-- **Interactive CLI**: Prompts for user choices when large files are detected.
-- **Structured Output**: Generates a CSV file with timestamps, speaker labels, and cleaned text.
-- **Robust Error Handling**: Handles API errors, file issues, and diarization/model access problems gracefully.
-- **Extensible**: Modular codebase for easy extension and integration.
+### 📊 **Smart Document Generation**
+- **LLM-Powered Summaries** - GPT-based intelligent summarization
+- **Multiple Summary Types**:
+  - **General Summary** - Key points and action items
+  - **Functional Specification Document (FSD)** - Technical requirements extraction
+  - **Custom Prompts** - User-defined summary formats
+- **Export Options** - TXT and Word document formats
+- **Editable Content** - Modify transcripts and summaries through the interface
 
----
+### 🎯 **Enterprise-Grade Features**
+- **Background Processing** - Celery-based asynchronous task handling
+- **Real-time Progress Tracking** - Live updates on processing status
+- **RESTful API** - Complete API documentation with Swagger UI
+- **Scalable Architecture** - Microservices design for easy scaling
+- **Error Handling** - Comprehensive error management and recovery
 
-## Architecture
+## 🏗️ Architecture Overview
 
-### Directory Structure
 ```
-├── config.py              # API keys (OpenAI + Hugging Face)
-├── main.py                # Main orchestration script
-├── audio_processor.py     # Audio preprocessing & chunking
-├── transcriber.py         # OpenAI Whisper API integration
-├── diarizer.py            # Speaker diarization (pyannote.audio)
-├── aligner.py             # Transcript-speaker alignment
-├── requirements.txt       # Dependencies
-├── README.md              # Documentation
-└── input_audio/           # Place your audio files here
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Frontend      │    │    Backend      │    │   Celery        │
+│   (React)       │◄──►│   (FastAPI)     │◄──►│   Worker        │
+│   Port: 3000    │    │   Port: 8000    │    │   (Background)  │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Audio Files   │    │   Transcripts   │    │   Documents     │
+│   (WAV, MP3,    │    │   (CSV Format)  │    │   (TXT, DOCX)   │
+│    M4A, etc.)   │    │                 │    │                 │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
-### Processing Pipeline
-1. **Audio Preprocessing**: Converts input audio to mono, 16kHz WAV, applies speedup if needed, and saves in `processed_audio/`.
-2. **Transcription**: Sends audio (or chunks) to OpenAI Whisper API, receives detailed segments with timestamps.
-3. **Speaker Diarization**: Runs pyannote.audio to label each segment with a speaker.
-4. **Alignment**: Matches transcript segments to speaker labels using timestamps.
-5. **Output**: Writes a CSV file with `timestamp_start`, `timestamp_end`, `speaker`, and `text` columns.
+## 🛠️ Technology Stack
 
----
+### **Frontend**
+- **React 18** - Modern UI framework
+- **React Router** - Client-side routing
+- **Tailwind CSS** - Utility-first styling
+- **Axios** - HTTP client for API communication
+- **React Dropzone** - Drag-and-drop file uploads
+- **React Hot Toast** - User notifications
+- **Lucide React** - Beautiful icons
 
-## Setup & Installation
+### **Backend**
+- **FastAPI** - High-performance Python web framework
+- **Uvicorn** - ASGI server for FastAPI
+- **Celery** - Distributed task queue
+- **Redis** - Message broker for Celery (optional)
+- **Python 3.9+** - Core programming language
 
-### 1. Clone the Repository
+### **AI/ML Components**
+- **OpenAI Whisper** - Speech-to-text transcription
+- **HuggingFace pyannote** - Speaker diarization
+- **AssemblyAI** - Alternative speaker diarization
+- **GPT Models** - Intelligent summarization
+- **FFmpeg** - Audio processing and manipulation
+
+### **Data Processing**
+- **Pandas** - Data manipulation and CSV handling
+- **NumPy** - Numerical computing
+- **Librosa** - Audio analysis
+- **python-docx** - Word document generation
+
+## 📋 Features & Functionality
+
+### 🎵 **Audio Processing Pipeline**
+
+1. **File Upload**
+   - Drag-and-drop interface
+   - Support for WAV, MP3, M4A, FLAC, AAC
+   - Automatic file validation
+   - Progress tracking
+
+2. **Audio Preprocessing**
+   - Noise reduction and enhancement
+   - Speed adjustment (0.5x to 2.0x)
+   - Automatic audio optimization
+   - Chunk processing for large files
+
+3. **Transcription**
+   - OpenAI Whisper integration
+   - Multi-language detection
+   - High-accuracy speech recognition
+   - Timestamp preservation
+
+4. **Speaker Diarization**
+   - Automatic speaker identification
+   - Speaker labeling (Speaker 1, Speaker 2, etc.)
+   - Conversation flow mapping
+   - Multiple diarization engines
+
+5. **Transcript Alignment**
+   - Speaker-transcript synchronization
+   - Timestamp alignment
+   - CSV export with speaker labels
+   - Editable transcript format
+
+### 📄 **Document Generation**
+
+1. **Intelligent Summarization**
+   - GPT-powered content analysis
+   - Key points extraction
+   - Action item identification
+   - Context-aware summarization
+
+2. **Summary Types**
+   - **General Summary**: Meeting highlights and key decisions
+   - **FSD Summary**: Technical requirements and specifications
+   - **Custom Summary**: User-defined prompts and formats
+
+3. **Export Options**
+   - Plain text (.txt) format
+   - Microsoft Word (.docx) format
+   - Structured document layout
+   - Professional formatting
+
+### 🔧 **Advanced Features**
+
+1. **Real-time Processing**
+   - Live progress updates
+   - Status monitoring
+   - Error handling and recovery
+   - Background task management
+
+2. **API Integration**
+   - RESTful API endpoints
+   - Swagger documentation
+   - JSON response format
+   - HTTP status codes
+
+3. **User Interface**
+   - Responsive design
+   - Modern UI/UX
+   - Dark/light theme support
+   - Mobile-friendly interface
+
+## 🚀 Quick Start Guide
+
+### **Prerequisites**
+
+- **Python 3.9+** installed on your system
+- **Node.js 16+** and npm installed
+- **FFmpeg** installed for audio processing
+- **Git** for cloning the repository
+
+### **Installation**
+
+1. **Clone the Repository**
+   ```bash
+   git clone <repository-url>
+   cd voice-to-text-ai
+   ```
+
+2. **Install Python Dependencies**
 ```bash
-git clone <your-repo-url>
-cd <repo-directory>
-```
-
-### 2. Install Python Dependencies
-```bash
+cd backend
 pip install -r requirements.txt
+   ```
+
+3. **Install Node.js Dependencies**
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+4. **Environment Setup**
+   - Create `.env` file in backend directory
+   - Add your API keys:
+     ```
+     OPENAI_API_KEY=your_openai_key_here
+     HUGGINGFACE_TOKEN=your_huggingface_token_here
+     ASSEMBLYAI_API_KEY=your_assemblyai_key_here
+     ```
+
+### **Starting the Application**
+
+#### **Option 1: Single Command (Recommended)**
+```powershell
+# Windows PowerShell
+.\start_app.ps1
 ```
 
-### 3. Install FFmpeg
-- **Windows**: Download from [ffmpeg.org](https://ffmpeg.org/download.html), extract, and add `bin/` to your PATH.
-- **Linux/macOS**: `sudo apt install ffmpeg` or `brew install ffmpeg`
+This will:
+- ✅ Start Backend (FastAPI) on port 8000
+- ✅ Start Frontend (React) on port 3000
+- ✅ Start Celery Worker for background tasks
+- ✅ Open separate terminal windows for each service
+- ✅ Show real-time logs in individual terminals
 
-### 4. Configure API Keys
-- Edit `config.py`:
-  ```python
-  OPENAI_API_KEY = "sk-..."  # Your OpenAI API key
-  HUGGINGFACE_TOKEN = "hf_..."  # Your Hugging Face token
-  ```
-- **Get your OpenAI key**: https://platform.openai.com/api-keys
-- **Get your Hugging Face token**: https://huggingface.co/settings/tokens
-
-### 5. Accept Model Terms on Hugging Face
-- Visit [pyannote/speaker-diarization-3.1](https://huggingface.co/pyannote/speaker-diarization-3.1) and [pyannote/segmentation-3.0](https://huggingface.co/pyannote/segmentation-3.0)
-- Click “Access repository” or “Agree and access repository” for both
-
----
-
-## Configuration
-
-- **config.py**: Store your API keys here.
-- **requirements.txt**: All dependencies are listed here.
-- **input_audio/**: Place your meeting audio files here (any format supported by ffmpeg/pydub).
-
----
-
-## Usage
-
-### Basic Command
+#### **Option 2: Manual Startup**
 ```bash
-python main.py input_audio/your_meeting.m4a
+# Terminal 1: Backend
+cd backend
+python -m uvicorn app.main:app --reload --port 8000
+
+# Terminal 2: Frontend
+cd frontend
+npm start
+
+# Terminal 3: Celery Worker
+cd backend
+python celery_worker.py
 ```
 
-### If File is Too Large
-- The script will prompt:
-  - **Option 1**: Auto-adjust speedup (recommended)
-  - **Option 2**: Chunk processing (splits into 10-min chunks)
+### **Accessing the Application**
 
-### With Manual Speedup
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:8000
+- **API Documentation**: http://localhost:8000/docs
+- **Alternative API Docs**: http://localhost:8000/redoc
+
+## 📖 Usage Guide
+
+### **1. Upload Audio File**
+
+1. Navigate to the **Upload** page
+2. Drag and drop your audio file or click to browse
+3. Configure processing options:
+   - **Speed**: Adjust playback speed (0.5x - 2.0x)
+   - **Auto-adjust**: Automatic audio optimization
+   - **Chunk Mode**: Process large files in chunks
+   - **Diarizer**: Choose speaker identification engine
+4. Click **Upload & Process**
+
+### **2. Monitor Processing**
+
+1. Go to the **Status** page to track progress
+2. View real-time updates:
+   - Audio preprocessing
+   - Transcription progress
+   - Speaker diarization
+   - Summary generation
+3. Check individual terminal windows for detailed logs
+
+### **3. View Results**
+
+1. **Transcript Page**: View and edit the transcribed text
+   - Speaker-labeled conversation
+   - Timestamp information
+   - CSV export option
+   - Edit functionality
+
+2. **Document Page**: Access generated summaries
+   - Multiple summary types
+   - Download options (TXT/DOCX)
+   - Edit and regenerate summaries
+
+### **4. Export and Share**
+
+1. **Download Transcript**: CSV format with speaker labels
+2. **Download Summary**: TXT or Word document format
+3. **Share Results**: Copy links or export files
+
+## 🔧 Configuration Options
+
+### **Audio Processing Settings**
+
+```python
+# Speed adjustment (0.5x to 2.0x)
+speedup: float = 1.0
+
+# Automatic audio optimization
+auto_adjust: bool = False
+
+# Chunk processing for large files
+chunk_mode: bool = False
+chunk_duration: int = 10  # seconds
+
+# Speaker diarization engine
+diarizer: str = "huggingface"  # or "assemblyai"
+```
+
+### **Summary Generation Options**
+
+```python
+# Summary types
+summary_type: str = "general"  # "general", "fsd", "custom"
+
+# Custom prompts
+prompt: str = "Your custom prompt here"
+instructions: str = "Additional instructions"
+```
+
+## 🛠️ API Endpoints
+
+### **Core Endpoints**
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `POST` | `/upload` | Upload and process audio file |
+| `GET` | `/status/{audio_id}` | Get processing status |
+| `GET` | `/transcript/{audio_id}` | Download transcript |
+| `GET` | `/document/{audio_id}` | Download summary document |
+| `POST` | `/generate-summary/{audio_id}` | Generate custom summary |
+| `GET` | `/dashboard` | Get all audio files overview |
+
+### **Example API Usage**
+
 ```bash
-python main.py input_audio/your_meeting.m4a --speedup 1.2
+# Upload audio file
+curl -X POST "http://localhost:8000/upload" \
+  -H "Content-Type: multipart/form-data" \
+  -F "file=@audio.mp3" \
+  -F "speedup=1.0" \
+  -F "diarizer=huggingface"
+
+# Check status
+curl "http://localhost:8000/status/abc12345"
+
+# Download transcript
+curl "http://localhost:8000/transcript/abc12345" -o transcript.csv
+
+# Generate summary
+curl -X POST "http://localhost:8000/generate-summary/abc12345" \
+  -H "Content-Type: application/json" \
+  -d '{"summary_type": "general"}'
 ```
 
-### Force Chunk Processing
-```bash
-python main.py input_audio/your_meeting.m4a --chunk
-```
+## 🐛 Troubleshooting
 
-### Custom Output File
-```bash
-python main.py input_audio/your_meeting.m4a --output my_transcript.csv
-```
+### **Common Issues**
 
-### All Options
-```bash
-python main.py input_audio/your_meeting.m4a --speedup 1.2 --output my_transcript.csv --chunk --chunk-duration 5
-```
+1. **Port Already in Use**
+   ```bash
+   # Check what's using the port
+   netstat -ano | findstr :8000
+   netstat -ano | findstr :3000
+   
+   # Kill the process
+   taskkill /PID <process_id> /F
+   ```
 
----
+2. **Python Dependencies Missing**
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   ```
 
-## Output Format
+3. **Node.js Dependencies Missing**
+   ```bash
+   cd frontend
+   npm install
+   ```
 
-The output is a CSV file with the following columns:
-- `timestamp_start`: Start time (MM:SS)
-- `timestamp_end`: End time (MM:SS)
-- `speaker`: Speaker label (e.g., SPEAKER_00)
-- `text`: Cleaned, readable transcript
+4. **FFmpeg Not Found**
+   - Download FFmpeg from https://ffmpeg.org/
+   - Add to system PATH
+   - Restart terminal
 
-**Example:**
-```csv
-timestamp_start,timestamp_end,speaker,text
-00:00,00:05,SPEAKER_00,"Hello everyone, welcome to the meeting."
-00:05,00:12,SPEAKER_01,"Thank you for having us today."
-```
+5. **API Keys Missing**
+   - Check `.env` file in backend directory
+   - Ensure all required API keys are set
+   - Restart the application
 
----
+### **Log Files**
 
-## Advanced Options
+- **Backend Logs**: Check the Backend terminal window
+- **Frontend Logs**: Check the Frontend terminal window
+- **Celery Logs**: Check the Celery terminal window
 
-- **Auto Speedup**: Automatically increases audio speed to fit under Whisper API’s 25MB limit.
-- **Chunk Processing**: Splits audio into N-minute chunks for large files.
-- **File Caching**: Reuses processed audio/chunks if already present.
-- **Interactive Prompts**: Guides user through options for large files.
-- **Custom Output**: Specify output CSV name; default is based on input file name.
+## 🔒 Security Considerations
 
----
+- **API Key Management**: Store API keys in environment variables
+- **File Upload Validation**: Validate file types and sizes
+- **Error Handling**: Don't expose sensitive information in errors
+- **Rate Limiting**: Implement rate limiting for API endpoints
+- **CORS Configuration**: Configure CORS for production deployment
 
-## Troubleshooting
+## 🚀 Deployment
 
-### Common Issues & Fixes
+### **Development**
+- Use the provided `start_app.ps1` script
+- Individual terminal windows for debugging
+- Hot reload enabled for development
 
-#### 1. **FFmpeg Not Found**
-- **Error**: `Couldn't find ffmpeg or avconv...`
-- **Fix**: Install FFmpeg and add to your PATH.
+### **Production**
+- Use Docker containers for consistency
+- Set up reverse proxy (nginx)
+- Configure SSL certificates
+- Use production-grade database
+- Implement proper logging and monitoring
 
-#### 2. **Audio File Too Large**
-- **Error**: `Audio file too large (XX.XMB). Whisper API limit is 25MB.`
-- **Fix**: Use auto-adjust speedup or chunk processing.
+## 📝 License
 
-#### 3. **Hugging Face Model Access**
-- **Error**: `Could not download 'pyannote/segmentation-3.0' model...`
-- **Fix**: Accept user conditions for all required models on Hugging Face.
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-#### 4. **API Key Issues**
-- **Error**: `Invalid API key` or authentication errors
-- **Fix**: Double-check your API keys in `config.py`.
+## 🤝 Contributing
 
-#### 5. **No Segments in Transcription**
-- **Error**: `Whisper API response segments is None`
-- **Fix**: The script will fallback to a single segment using the text field.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-#### 6. **Symlink Warning on Windows**
-- **Warning**: `huggingface_hub cache-system uses symlinks by default...`
-- **Fix**: Enable Developer Mode on Windows or ignore the warning.
+## 📞 Support
 
----
-
-## Extending the Solution
-
-- **Add More Output Formats**: Extend `aligner.py` to support JSON, SRT, or plain text.
-- **Integrate Summarization**: Add a post-processing step using GPT or similar models.
-- **Web/API Interface**: Wrap `main.py` in a FastAPI or Flask app for web-based uploads.
-- **Speaker Name Mapping**: Allow mapping of speaker labels to real names.
-- **Batch Processing**: Add a loop in `main.py` to process all files in `input_audio/`.
-
----
-
-## Cost & Performance
-
-- **Whisper API**: ~$0.006 per minute of audio
-- **pyannote.audio**: Free (runs locally, but requires model download)
-- **Speedup Option**: 1.2x speedup reduces cost by ~17%
-- **Chunking**: Allows processing of arbitrarily large files
+For support and questions:
+- Create an issue in the repository
+- Check the troubleshooting section
+- Review the API documentation
 
 ---
 
-## FAQ
-
-**Q: What audio formats are supported?**
-A: Any format supported by ffmpeg/pydub (WAV, MP3, M4A, etc.)
-
-**Q: How many speakers can it detect?**
-A: pyannote.audio can detect multiple speakers, but accuracy depends on audio quality and model.
-
-**Q: Can I use this for languages other than English?**
-A: Yes, Whisper supports many languages, but diarization is best for clear, multi-speaker English audio.
-
-**Q: Is my data secure?**
-A: Audio is sent to OpenAI for transcription. Diarization is local. No data is stored beyond your machine unless you choose to upload it elsewhere.
-
----
-
-## License
-This project is open source. Please ensure you comply with the licenses of:
-- OpenAI Whisper API
-- pyannote.audio
-- All other dependencies
-
----
-
-## Acknowledgements
-- [OpenAI Whisper](https://platform.openai.com/docs/guides/speech-to-text)
-- [pyannote.audio](https://github.com/pyannote/pyannote-audio)
-- [Hugging Face](https://huggingface.co/)
-- [pydub](https://github.com/jiaaro/pydub)
-- [pandas](https://pandas.pydata.org/) 
+**Built with ❤️ using cutting-edge AI technology**

@@ -1,0 +1,821 @@
+{
+  "audio_processing": [
+    {
+      "timestamp": "2025-07-19T14:57:34.341488",
+      "audio_duration_minutes": 5.0,
+      "diarizer": "assemblyai",
+      "speedup": 1.5,
+      "chunk_mode": false,
+      "chunk_duration": 10,
+      "actual_time_seconds": 180.5,
+      "configs": {
+        "test": true
+      }
+    },
+    {
+      "timestamp": "2025-07-19T15:08:00.363231",
+      "audio_duration_minutes": 10,
+      "diarizer": "huggingface",
+      "speedup": 1.0,
+      "chunk_mode": false,
+      "chunk_duration": 10,
+      "actual_time_seconds": 162.516973,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false,
+        "diarizer_used": "huggingface",
+        "transcription_method": "whisper_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T15:11:34.657253",
+      "audio_duration_minutes": 10,
+      "diarizer": "huggingface",
+      "speedup": 1.0,
+      "chunk_mode": false,
+      "chunk_duration": 10,
+      "actual_time_seconds": 152.594493,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false,
+        "diarizer_used": "huggingface",
+        "transcription_method": "whisper_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T15:14:43.578366",
+      "audio_duration_minutes": 10,
+      "diarizer": "huggingface",
+      "speedup": 1.0,
+      "chunk_mode": false,
+      "chunk_duration": 10,
+      "actual_time_seconds": 155.165801,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false,
+        "diarizer_used": "huggingface",
+        "transcription_method": "whisper_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:06:24.705570",
+      "audio_duration_minutes": 10,
+      "diarizer": "huggingface",
+      "speedup": 1.0,
+      "chunk_mode": false,
+      "chunk_duration": 10,
+      "actual_time_seconds": 125.085995,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false,
+        "diarizer_used": "huggingface",
+        "transcription_method": "whisper_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:08:48.039376",
+      "audio_duration_minutes": 10,
+      "diarizer": "assemblyai",
+      "speedup": 1.0,
+      "chunk_mode": false,
+      "chunk_duration": 10,
+      "actual_time_seconds": 10.096512,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:10:02.793619",
+      "audio_duration_minutes": 10,
+      "diarizer": "assemblyai",
+      "speedup": 1.0,
+      "chunk_mode": false,
+      "chunk_duration": 10,
+      "actual_time_seconds": 10.224537,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:11:50.182543",
+      "audio_duration_minutes": 10,
+      "diarizer": "assemblyai",
+      "speedup": 1.0,
+      "chunk_mode": false,
+      "chunk_duration": 10,
+      "actual_time_seconds": 10.113421,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:13:32.335262",
+      "audio_duration_minutes": 10,
+      "diarizer": "assemblyai",
+      "speedup": 1.0,
+      "chunk_mode": false,
+      "chunk_duration": 10,
+      "actual_time_seconds": 10.287828,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-21T15:57:37.108404",
+      "audio_duration_minutes": 10,
+      "diarizer": "huggingface",
+      "speedup": 1.0,
+      "chunk_mode": false,
+      "chunk_duration": 10,
+      "actual_time_seconds": 145.049698,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false,
+        "diarizer_used": "huggingface",
+        "transcription_method": "whisper_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-21T18:13:58.945772",
+      "audio_duration_minutes": 10,
+      "diarizer": "huggingface",
+      "speedup": 1.0,
+      "chunk_mode": false,
+      "chunk_duration": 10,
+      "actual_time_seconds": 132.16169,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false,
+        "diarizer_used": "huggingface",
+        "transcription_method": "whisper_single"
+      }
+    }
+  ],
+  "summary_generation": [
+    {
+      "timestamp": "2025-07-19T14:57:34.342486",
+      "transcript_length_chars": 2500,
+      "summary_type": "general",
+      "actual_time_seconds": 15.2,
+      "configs": {
+        "test": true
+      }
+    },
+    {
+      "timestamp": "2025-07-19T15:16:04.989372",
+      "transcript_length_chars": 1580,
+      "summary_type": "custom_templates.funny",
+      "actual_time_seconds": 5.918729,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false,
+        "diarizer_used": "huggingface",
+        "transcription_method": "whisper_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T15:29:04.052270",
+      "transcript_length_chars": 1580,
+      "summary_type": "meeting_minutes",
+      "actual_time_seconds": 7.236678,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false,
+        "diarizer_used": "huggingface",
+        "transcription_method": "whisper_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T15:32:58.843031",
+      "transcript_length_chars": 1580,
+      "summary_type": "fsd",
+      "actual_time_seconds": 12.70036,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false
+      }
+    },
+    {
+      "timestamp": "2025-07-19T15:33:22.053418",
+      "transcript_length_chars": 1580,
+      "summary_type": "fsd",
+      "actual_time_seconds": 10.53019,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false
+      }
+    },
+    {
+      "timestamp": "2025-07-19T15:40:11.221615",
+      "transcript_length_chars": 1580,
+      "summary_type": "custom",
+      "actual_time_seconds": 7.967938,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false
+      }
+    },
+    {
+      "timestamp": "2025-07-19T15:48:36.848907",
+      "transcript_length_chars": 1580,
+      "summary_type": "fsd",
+      "actual_time_seconds": 18.131609,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false
+      }
+    },
+    {
+      "timestamp": "2025-07-19T15:50:18.743833",
+      "transcript_length_chars": 1580,
+      "summary_type": "fsd",
+      "actual_time_seconds": 19.391544,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false
+      }
+    },
+    {
+      "timestamp": "2025-07-19T15:50:57.095447",
+      "transcript_length_chars": 1580,
+      "summary_type": "custom",
+      "actual_time_seconds": 18.020112,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false
+      }
+    },
+    {
+      "timestamp": "2025-07-19T15:52:01.637747",
+      "transcript_length_chars": 1580,
+      "summary_type": "general",
+      "actual_time_seconds": 8.953207,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false
+      }
+    },
+    {
+      "timestamp": "2025-07-19T15:55:42.436687",
+      "transcript_length_chars": 1580,
+      "summary_type": "custom",
+      "actual_time_seconds": 11.156267,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false
+      }
+    },
+    {
+      "timestamp": "2025-07-19T15:56:20.815279",
+      "transcript_length_chars": 1580,
+      "summary_type": "general",
+      "actual_time_seconds": 8.512159,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false
+      }
+    },
+    {
+      "timestamp": "2025-07-19T15:56:44.356849",
+      "transcript_length_chars": 1580,
+      "summary_type": "custom",
+      "actual_time_seconds": 13.09917,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:06:41.655060",
+      "transcript_length_chars": 1576,
+      "summary_type": "general",
+      "actual_time_seconds": 8.472883,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false,
+        "diarizer_used": "huggingface",
+        "transcription_method": "whisper_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:08:10.826650",
+      "transcript_length_chars": 1576,
+      "summary_type": "custom",
+      "actual_time_seconds": 7.043414,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "huggingface",
+        "assemblyai_key_used": false,
+        "diarizer_used": "huggingface",
+        "transcription_method": "whisper_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:10:36.274107",
+      "transcript_length_chars": 1475,
+      "summary_type": "general",
+      "actual_time_seconds": 8.247283,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:12:08.729643",
+      "transcript_length_chars": 1475,
+      "summary_type": "general",
+      "actual_time_seconds": 8.109398,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:13:43.830948",
+      "transcript_length_chars": 1475,
+      "summary_type": "general",
+      "actual_time_seconds": 7.693954,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:19:05.288450",
+      "transcript_length_chars": 1475,
+      "summary_type": "general",
+      "actual_time_seconds": 9.858617,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:19:33.551831",
+      "transcript_length_chars": 1475,
+      "summary_type": "custom",
+      "actual_time_seconds": 10.687689,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:21:57.010193",
+      "transcript_length_chars": 1475,
+      "summary_type": "general",
+      "actual_time_seconds": 8.941439,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:22:21.848231",
+      "transcript_length_chars": 1475,
+      "summary_type": "custom",
+      "actual_time_seconds": 9.675616,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:23:49.959711",
+      "transcript_length_chars": 1475,
+      "summary_type": "general",
+      "actual_time_seconds": 9.007586,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:24:30.032664",
+      "transcript_length_chars": 1475,
+      "summary_type": "custom",
+      "actual_time_seconds": 7.943306,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:26:32.726128",
+      "transcript_length_chars": 1475,
+      "summary_type": "general",
+      "actual_time_seconds": 9.533809,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:26:57.079346",
+      "transcript_length_chars": 1475,
+      "summary_type": "general",
+      "actual_time_seconds": 13.70413,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:27:23.980789",
+      "transcript_length_chars": 1475,
+      "summary_type": "custom",
+      "actual_time_seconds": 11.353945,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:28:27.204296",
+      "transcript_length_chars": 1475,
+      "summary_type": "custom",
+      "actual_time_seconds": 11.050676,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:29:30.788793",
+      "transcript_length_chars": 1475,
+      "summary_type": "custom",
+      "actual_time_seconds": 10.51872,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:30:43.523498",
+      "transcript_length_chars": 1475,
+      "summary_type": "fsd",
+      "actual_time_seconds": 20.198082,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:56:18.841455",
+      "transcript_length_chars": 1475,
+      "summary_type": "custom",
+      "actual_time_seconds": 14.431739,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:58:43.955486",
+      "transcript_length_chars": 1475,
+      "summary_type": "custom",
+      "actual_time_seconds": 8.953308,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T16:59:16.563777",
+      "transcript_length_chars": 1475,
+      "summary_type": "fsd",
+      "actual_time_seconds": 22.051308,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T17:02:11.735640",
+      "transcript_length_chars": 1475,
+      "summary_type": "custom",
+      "actual_time_seconds": 7.79414,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-19T17:04:14.079926",
+      "transcript_length_chars": 1475,
+      "summary_type": "fsd",
+      "actual_time_seconds": 24.293167,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-21T15:21:42.993385",
+      "transcript_length_chars": 1475,
+      "summary_type": "custom",
+      "actual_time_seconds": 14.790493,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-21T15:22:10.174282",
+      "transcript_length_chars": 1475,
+      "summary_type": "custom",
+      "actual_time_seconds": 14.191312,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-21T17:34:37.764885",
+      "transcript_length_chars": 1475,
+      "summary_type": "custom",
+      "actual_time_seconds": 12.593846,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-21T17:55:23.704762",
+      "transcript_length_chars": 1475,
+      "summary_type": "custom",
+      "actual_time_seconds": 35.125066,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    },
+    {
+      "timestamp": "2025-07-21T18:05:15.171204",
+      "transcript_length_chars": 1475,
+      "summary_type": "fsd",
+      "actual_time_seconds": 16.800453,
+      "configs": {
+        "speedup": 1.0,
+        "auto_adjust": false,
+        "chunk_mode": false,
+        "chunk_duration": 10,
+        "diarizer": "assemblyai",
+        "assemblyai_key_used": true,
+        "diarizer_used": "assemblyai",
+        "transcription_method": "assemblyai_single"
+      }
+    }
+  ]
+}

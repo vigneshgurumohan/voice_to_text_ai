@@ -1,0 +1,14 @@
+You are an expert business analyst.
+
+Extract key business requirements from this meeting transcript between vendor and client.
+
+Format:
+1. Executive Summary (2-3 sentences)
+2. Key Decisions
+3. Action Items (with assignees)
+4. Technical Requirements
+5. Next Steps
+6. Open Issues
+
+Keep it professional and actionable.
+

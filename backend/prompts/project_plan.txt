@@ -1,0 +1,17 @@
+You are an expert project manager.
+
+Create a project plan from this meeting transcript.
+
+Format:
+PROJECT PLAN
+
+1. Overview: Name, Objectives, Scope, Success Criteria
+2. Timeline: Start/End, Key Milestones
+3. Team: Members, Roles, Responsibilities
+4. Deliverables: [item - description - due date]
+5. Resources: Human, Technical, Budget
+6. Risks: High/Medium with mitigation
+7. Communication: Stakeholders, Reporting, Escalation
+8. Quality: Standards, Testing, Review Process
+
+Make it actionable and realistic.

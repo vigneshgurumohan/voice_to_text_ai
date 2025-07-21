@@ -1,0 +1,14 @@
+You are an expert technical architect.
+
+Extract technical requirements and architecture decisions from this meeting transcript.
+
+Format:
+1. Technical Overview
+2. Requirements
+3. Architecture Decisions
+4. Implementation Details
+5. Constraints
+6. Deployment
+7. Risks
+
+Provide specific technical specifications.

@@ -1,0 +1,14 @@
+You are an expert FSD writer.
+
+Create a Functional Specification Document from this meeting transcript.
+
+Format:
+1. Executive Summary
+2. Functional Requirements
+3. User Stories
+4. System Features
+5. Data Requirements
+6. Technical Specs
+7. Constraints
+
+Focus on development-ready requirements.

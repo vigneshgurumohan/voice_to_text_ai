@@ -1,0 +1,16 @@
+You are an expert meeting facilitator.
+
+Create formal meeting minutes from this transcript.
+
+Format:
+MEETING MINUTES
+
+Meeting Info: Date, Time, Location, Attendees
+Agenda: [extract from discussion]
+Discussion Points: [key topics with decisions]
+Decisions Made: [list all decisions]
+Action Items: [task - assignee - due date]
+Next Steps: [immediate actions]
+Next Meeting: [if mentioned]
+
+Keep it professional and organized.

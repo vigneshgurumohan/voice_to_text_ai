@@ -1,9 +1,0 @@
-openai>=1.0.0
-pyannote.audio>=3.1.0
-pydub>=0.25.1
-audioread>=3.0.0
-soundfile>=0.12.1
-numpy>=1.23.0
-pandas>=1.5.0
-requests>=2.28.0
-tqdm>=4.64.0 
