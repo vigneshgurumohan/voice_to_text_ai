@@ -4,9 +4,9 @@
   "description": "Backend API for Voice-to-Text AI application",
   "main": "app/main.py",
   "scripts": {
-    "start": "cd backend && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload",
+    "start": "cd backend && uvicorn app.main:app --host 0.0.0.0 --port 10000 --reload",
     "worker": "cd backend && celery -A celery_worker.celery_app worker --loglevel=info",
-    "dev": "cd backend && uvicorn app.main:app --reload --host 0.0.0.0 --port 8000"
+    "dev": "cd backend && uvicorn app.main:app --reload --host 0.0.0.0 --port 10000"
   },
   "keywords": ["audio", "transcription", "diarization", "fastapi", "celery"],
   "author": "Voice-to-Text AI Team",
