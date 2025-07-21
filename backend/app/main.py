@@ -42,6 +42,18 @@ app.add_middleware(
 if os.path.exists("static"):
     app.mount("/static", StaticFiles(directory="static"), name="static")
 
+# Serve React build as static files
+frontend_build_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../frontend/build'))
+if os.path.exists(frontend_build_dir):
+    app.mount("/", StaticFiles(directory=frontend_build_dir, html=True), name="frontend")
+
+    @app.get("/{full_path:path}")
+    async def serve_react_app(full_path: str):
+        index_file = os.path.join(frontend_build_dir, "index.html")
+        if os.path.exists(index_file):
+            return FileResponse(index_file)
+        return {"detail": "index.html not found"}
+
 def resolve_path_from_metadata(path: str) -> str:
     """Resolve file paths from metadata to work with backend directory structure"""
     if not path:
