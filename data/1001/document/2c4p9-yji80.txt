@@ -1,0 +1,33 @@
+Main Title
+
+Comical Summary of the Conversation
+
+Section 1
+
+SPEAKER_01  
+“Alright, everyone, eyes on the screen! Madhushi, are you awake? Fauja, explain this mysterious ‘control’ thingy.”
+
+Section 2
+
+SPEAKER_00  
+“Control? You mean, like, remote control? Oh, you mean accounts! So, if a customer bounces four or more cheques in a year, we put them on the naughty list. I even gossiped with Jessam about it.”
+
+Section 3
+
+SPEAKER_01  
+“Wait, so, bounced cheques because they’re broke?”
+
+Section 4
+
+SPEAKER_00  
+“Exactly! We split the data like a pizza—business here, private banking there, private sector gets no pizza. Then we focus on the classic and WPG customers, and if they owe us money, we take action. Like, serious action. Like, more segregation!”
+
+Section 5
+
+SPEAKER_01  
+“So, more action?”
+
+Section 6
+
+SPEAKER_00  
+“Yes, more segregation! Because nothing says ‘control’ like endless sorting!”

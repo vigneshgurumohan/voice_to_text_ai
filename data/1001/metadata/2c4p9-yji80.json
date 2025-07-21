@@ -1,0 +1,30 @@
+{
+  "filename": "2c4p9-yji80.m4a",
+  "configs": {
+    "speedup": 1.0,
+    "auto_adjust": false,
+    "chunk_mode": false,
+    "chunk_duration": 10,
+    "diarizer": "huggingface",
+    "assemblyai_key_used": false,
+    "diarizer_used": "huggingface",
+    "transcription_method": "whisper_single"
+  },
+  "audio_path": "..\\data\\1001\\input_audio\\2c4p9-yji80.m4a",
+  "transcript_path": "..\\data\\1001\\transcript\\2c4p9-yji80.csv",
+  "summary_path": "..\\data\\1001\\document\\2c4p9-yji80.txt",
+  "status": "summary_generated",
+  "task_id": "562bfece-2df0-474f-98e1-986fb4381a63",
+  "processing_started_at": "2025-07-19T16:04:19.621002",
+  "last_updated": "2025-07-19T16:08:10.829220",
+  "actual_processing_time_seconds": 125.085995,
+  "regeneration_started_at": "2025-07-19T16:08:03.035213",
+  "summary_started_at": "2025-07-19T16:08:03.783337",
+  "summary_config": {
+    "summary_type": "custom",
+    "prompt_used": "summarize the conversation to be very comical",
+    "instructions": ""
+  },
+  "summary_updated_at": "2025-07-19T16:08:10.828223",
+  "actual_summary_time_seconds": 7.043414
+}

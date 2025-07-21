@@ -1,0 +1,9 @@
+timestamp_start,timestamp_end,speaker,text
+00:00,00:30,SPEAKER_01,"We will go through the next set of, hope you are ready to see the screen, yes Madhushi. Hi Fauja, so can you please explain on this control, account services general processing."
+00:30,00:56,SPEAKER_00,"Control you mean? Okay, so account close due to 4 and more targets. Actually I discussed with Jessam also on the same control. What we are doing monthly basis, we are taking the data for one calendar year, where the. Customer has 4 and more return cheques due to non-sufficient funds."
+00:56,01:01,SPEAKER_01,"Where the customer has non-sufficient funds, is it?"
+01:01,01:30,SPEAKER_00,"Yes, return cheques with NSF. Okay. Okay, so we are taking the data, we are segregating, first we are segregating with the customers. Who are having, sorry, first we have a segregation. Segregation is what? We are segregating the data by the business wise. We are segregating the WPG separate, we are segregating the private banking separate,. We are segregating the private sector as these are out of the scope."
+01:30,01:33,SPEAKER_01,"Okay, you are only taking business wise, okay."
+01:33,01:55,SPEAKER_00,"Okay, then we are taking an action on the classic customers, I mean retail customers,. Classic customers, classic segment and the WPG segment. Okay. What we are doing on the same two segments, we are taking further actions and we are removing. All those accounts where the customer has any liability with us."
+01:55,01:59,SPEAKER_01,"Okay, we are taking further actions?"
+01:59,02:00,SPEAKER_00,To segregate.
